@@ -1,0 +1,54 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-color: #f6e64caa;
+}
+.round-img{
+    height: 150px;
+    width: 150px;
+}
+.header{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 32px;
+}
+.header p{
+    font-size: 24px;
+}
+.rounds{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 128px;
+    max-height: 150px;
+    margin-top: 32px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 80%;
+}
+.choices{
+    text-align: center;
+    margin-top: auto;
+}
+.choice-button{
+    width: 100px;
+    height: 100px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 144px;
+    flex-wrap: wrap;
+}
+ul li{
+    width: 100px;
+}
