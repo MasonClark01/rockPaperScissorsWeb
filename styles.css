@@ -23,7 +23,7 @@ body{
     align-items: space-between;
     flex-wrap: wrap;
     flex: 1;
-    gap: 128px;
+    gap: 15vw;
     max-height: 150px;
     margin-top: 32px;
 }
@@ -46,7 +46,7 @@ ul{
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 144px;
+    gap: 15vw;
     flex-wrap: wrap;
 }
 ul li{
