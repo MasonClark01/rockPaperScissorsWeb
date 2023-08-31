@@ -16,10 +16,8 @@ function changePlayerImg(image){
     }
 }
 
-function changeText(control){
-    if(x = 0){
-
-    }
+function changeText(){
+    document.getElementById("score").innerHTML = "Score: Player - " + pscore + " : Bob - " + bscore
     //1 for player win, -1 for bobwin, 0 for tie. update pscore and bscore here and update score id and text id.
 }
 function rpsRound(playerInput){
@@ -42,16 +40,28 @@ function rpsRound(playerInput){
     }
     console.log(bobChoices)
     let bobRound = bobChoices[Math.floor(Math.random() * (bobChoices.length - 0 + 1))];
+    if(bobRound === 0){
+        document.getElementById("bob-img").src = "./images/rock.svg"
+    }
+    if(bobRound === 1){
+        document.getElementById("bob-img").src = "./images/paper.svg"
+    }
+    if(bobRound === 2){
+        document.getElementById("bob-img").src = "./images/scissors.svg"
+    }
     console.log(bobRound)
     previousChoice = playerInput
     changePlayerImg(playerInput)
-    if((playerInput === 2 && bobRound === 0) || (playerInput === 0 && bobRound === 1)){
-        changeText(-1)
+    if((playerInput === 2 && bobRound === 0) || (playerInput === 0 && bobRound === 1) || (playerInput === 1 && bobRound === 2)){
+        bscore++
+        changeText()
     }
     else if(playerInput === bobRound){
-        changeText(0)
+        changeText()
     }
     else{
-        changeText(1)
+        pscore++
+        changeText()
+
     }
 }
